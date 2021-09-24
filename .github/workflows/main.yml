@@ -1,0 +1,25 @@
+  
+name: Docker Image CI
+ 
+on:
+
+  push:
+    branches: [ development, release ]
+    paths-ignore:
+    - ".github/workflows/**"  
+  
+  workflow_dispatch:
+
+jobs:
+  hello_world_job:
+    runs-on: teste
+    name: A job to say hello
+    steps:
+      - name: Hello world action step
+        id: hello
+        uses: luizhpriotto/dotnet-sonarscanner@v1
+        with:
+          who-to-greet: 'Priotto'
+      # Use the output from the `hello` step
+      - name: Get the output time
+        run: echo "The time was ${{ steps.hello.outputs.time }}"
