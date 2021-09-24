@@ -1,1 +1,1 @@
-# -dotnet-sonarscanner
+#dotnet-sonarscanner
