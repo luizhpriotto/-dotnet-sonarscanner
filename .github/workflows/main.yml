@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: luizhpriotto/dotnet-sonarscanner@v1.1
+        uses: luizhpriotto/dotnet-sonarscanner@sonar-front-sobar-v1
         with:
           who-to-greet: 'Priotto'
       # Use the output from the `hello` step
